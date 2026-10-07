@@ -1,0 +1,700 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/coding/verilog/xc7k70t/project_ethernet/sim_verify/tb_compare.v" into library work
+INFO: [VRFC 10-311] analyzing module tb_compare
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/software/vivado/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -L unisims_ver work.tb_compare work.glbl -s tb_cmp 
+Multi-threading is on. Using 10 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3645] port 'full' remains unconnected for this instance [D:/coding/verilog/xc7k70t/project_ethernet/project_ethernet.srcs/sources_1/new/ethernet_tx_pack.v:127]
+WARNING: [VRFC 10-3645] port 'full' remains unconnected for this instance [D:/coding/verilog/xc7k70t/project_ethernet/project_ethernet.srcs/sources_1/new/ethernet_tx_pack.v:150]
+WARNING: [VRFC 10-3645] port 'full' remains unconnected for this instance [D:/coding/verilog/xc7k70t/project_ethernet/sim_verify/ethernet_tx_pack_ref.v:149]
+WARNING: [VRFC 10-3645] port 'full' remains unconnected for this instance [D:/coding/verilog/xc7k70t/project_ethernet/sim_verify/ethernet_tx_pack_ref.v:169]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module unisims_ver.GND
+Compiling module unisims_ver.LUT5
+Compiling module unisims_ver.FDSE_default
+Compiling module unisims_ver.LUT4
+Compiling module unisims_ver.x_lut3_mux8
+Compiling module unisims_ver.LUT3
+Compiling module unisims_ver.FDRE_default
+Compiling module unisims_ver.CARRY4
+Compiling module unisims_ver.LUT6
+Compiling module unisims_ver.x_lut1_mux2
+Compiling module unisims_ver.LUT1
+Compiling module unisims_ver.x_lut2_mux4
+Compiling module unisims_ver.LUT2
+Compiling module unisims_ver.MUXF8
+Compiling module unisims_ver.MUXF7
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(READ_WIDTH_A=...
+Compiling module unisims_ver.RAMB36E1(READ_WIDTH_A=9,READ_WID...
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(RAM_EXTENSION...
+Compiling module unisims_ver.RAMB36E1(RAM_EXTENSION_A="LOWER"...
+Compiling module unisims_ver.RB36_INTERNAL_VLOG(RAM_EXTENSION...
+Compiling module unisims_ver.RAMB36E1(RAM_EXTENSION_A="UPPER"...
+Compiling module work.fifo_19x65536_fwft_sync
+Compiling module unisims_ver.RB18_INTERNAL_VLOG(RAM_MODE="SDP...
+Compiling module unisims_ver.RAMB18E1(RAM_MODE="SDP",READ_WID...
+Compiling module work.fifo_32x128_fwft_sync
+Compiling module work.ethernet_tx_pack
+Compiling module work.ethernet_tx_pack_ref
+Compiling module work.tb_compare
+Compiling module work.glbl
+Built simulation snapshot tb_cmp
+
+****** xsim v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source xsim.dir/tb_cmp/xsim_script.tcl
+# xsim {tb_cmp} -autoloadwcfg -runall
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+run -all
+==== CASE1 doc example ====
+ORIG P0 W0 0102 s1 e0 m0
+REF  P0 W0 0102 s1 e0 m0
+ORIG P0 W1 0304 s0 e0 m0
+REF  P0 W1 0304 s0 e0 m0
+ORIG P0 W2 0506 s0 e0 m0
+REF  P0 W2 0506 s0 e0 m0
+ORIG P0 W3 2c02 s0 e0 m0
+REF  P0 W3 2c02 s0 e0 m0
+ORIG P0 W4 0304 s0 e0 m0
+REF  P0 W4 0304 s0 e0 m0
+ORIG P0 W5 0507 s0 e0 m0
+REF  P0 W5 0507 s0 e0 m0
+ORIG P0 W6 0800 s0 e0 m0
+REF  P0 W6 0800 s0 e0 m0
+ORIG P0 W7 0000 s0 e0 m0
+REF  P0 W7 4500 s0 e0 m0
+ORIG P0 W8 0020 s0 e0 m0
+REF  P0 W8 0022 s0 e0 m0
+ORIG P0 W9 0001 s0 e0 m0
+REF  P0 W9 0000 s0 e0 m0
+ORIG P0 W10 0000 s0 e0 m0
+REF  P0 W10 0000 s0 e0 m0
+ORIG P0 W11 ff11 s0 e0 m0
+REF  P0 W11 ff11 s0 e0 m0
+ORIG P0 W12 xxxx s0 e0 m0
+REF  P0 W12 3867 s0 e0 m0
+ORIG P0 W13 c0a8 s0 e0 m0
+REF  P0 W13 c0a8 s0 e0 m0
+ORIG P0 W14 010a s0 e0 m0
+REF  P0 W14 010a s0 e0 m0
+ORIG P0 W15 c0a8 s0 e0 m0
+REF  P0 W15 c0a8 s0 e0 m0
+ORIG P0 W16 0109 s0 e0 m0
+REF  P0 W16 0109 s0 e0 m0
+DBG t=395000 st=3 rd=0 dout=4000a emp=0 mrd=0 mdl=0
+ORIG P0 W17 0bb8 s0 e0 m0
+REF  P0 W17 1388 s0 e0 m0
+DBG t=405000 st=3 rd=0 dout=4000a emp=0 mrd=0 mdl=0
+ORIG P0 W18 0000 s0 e0 m0
+REF  P0 W18 0bb8 s0 e0 m0
+DBG t=415000 st=3 rd=0 dout=4000a emp=0 mrd=0 mdl=0
+ORIG P0 W19 0014 s0 e0 m0
+REF  P0 W19 000e s0 e0 m0
+DBG t=425000 st=3 rd=0 dout=4000a emp=0 mrd=0 mdl=0
+ORIG P0 W20 zzzz s0 e0 m0
+REF  P0 W20 5d0f s0 e0 m0
+DBG t=435000 st=4 rd=1 dout=4000a emp=0 mrd=0 mdl=0
+ORIG P0 W21 xxxx s0 e0 m0
+REF  P0 W21 000a s0 e0 m0
+DBG t=445000 st=4 rd=1 dout=00001 emp=0 mrd=0 mdl=0
+ORIG P0 W22 xxxx s0 e0 m0
+REF  P0 W22 0001 s0 e0 m0
+DBG t=455000 st=4 rd=1 dout=20014 emp=0 mrd=1 mdl=1
+ORIG P0 W23 xxxx s0 e0 m0
+REF  P0 W23 0014 s0 e1 m0
+REF  P0 END n=24
+ORIG P0 W24 xxxx s0 e0 m0
+ORIG P0 W25 0bb8 s0 e0 m0
+ORIG P0 W26 0000 s0 e0 m0
+ORIG P0 W27 0014 s0 e0 m0
+ORIG P0 W28 zzzz s0 e0 m0
+ORIG P0 W29 xxxx s0 e0 m0
+ORIG P0 W30 xxxx s0 e0 m0
+ORIG P0 W31 xxxx s0 e0 m0
+ORIG P0 W32 xxxx s0 e0 m0
+ORIG P0 W33 0bb8 s0 e0 m0
+ORIG P0 W34 0000 s0 e0 m0
+ORIG P0 W35 0014 s0 e0 m0
+ORIG P0 W36 zzzz s0 e0 m0
+ORIG P0 W37 xxxx s0 e0 m0
+ORIG P0 W38 xxxx s0 e0 m0
+ORIG P0 W39 xxxx s0 e0 m0
+ORIG P0 W40 xxxx s0 e0 m0
+ORIG P0 W41 0bb8 s0 e0 m0
+ORIG P0 W42 0000 s0 e0 m0
+ORIG P0 W43 0014 s0 e0 m0
+ORIG P0 W44 zzzz s0 e0 m0
+ORIG P0 W45 xxxx s0 e0 m0
+ORIG P0 W46 xxxx s0 e0 m0
+ORIG P0 W47 xxxx s0 e0 m0
+ORIG P0 W48 xxxx s0 e0 m0
+ORIG P0 W49 0bb8 s0 e0 m0
+ORIG P0 W50 0000 s0 e0 m0
+ORIG P0 W51 0014 s0 e0 m0
+ORIG P0 W52 zzzz s0 e0 m0
+ORIG P0 W53 xxxx s0 e0 m0
+ORIG P0 W54 xxxx s0 e0 m0
+ORIG P0 W55 xxxx s0 e0 m0
+==== CASE2 mty=1 ====
+ORIG P0 W56 xxxx s0 e0 m0
+ORIG P0 W57 0bb8 s0 e0 m0
+ORIG P0 W58 0000 s0 e0 m0
+ORIG P0 W59 0014 s0 e0 m0
+ORIG P0 W60 zzzz s0 e0 m0
+ORIG P0 W61 xxxx s0 e0 m0
+ORIG P0 W62 xxxx s0 e0 m0
+ORIG P0 W63 xxxx s0 e0 m0
+REF  P1 W0 0102 s1 e0 m0
+ORIG P0 W64 xxxx s0 e0 m0
+REF  P1 W1 0304 s0 e0 m0
+ORIG P0 W65 0bb8 s0 e0 m0
+REF  P1 W2 0506 s0 e0 m0
+ORIG P0 W66 0000 s0 e0 m0
+REF  P1 W3 2c02 s0 e0 m0
+ORIG P0 W67 0014 s0 e0 m0
+REF  P1 W4 0304 s0 e0 m0
+ORIG P0 W68 zzzz s0 e0 m0
+REF  P1 W5 0507 s0 e0 m0
+ORIG P0 W69 xxxx s0 e0 m0
+REF  P1 W6 0800 s0 e0 m0
+ORIG P0 W70 xxxx s0 e0 m0
+REF  P1 W7 4500 s0 e0 m0
+ORIG P0 W71 xxxx s0 e0 m0
+REF  P1 W8 001f s0 e0 m0
+ORIG P0 W72 xxxx s0 e0 m0
+REF  P1 W9 0001 s0 e0 m0
+ORIG P0 W73 0bb8 s0 e0 m0
+REF  P1 W10 0000 s0 e0 m0
+ORIG P0 W74 0000 s0 e0 m0
+REF  P1 W11 ff11 s0 e0 m0
+ORIG P0 W75 0014 s0 e0 m0
+REF  P1 W12 3869 s0 e0 m0
+ORIG P0 W76 zzzz s0 e0 m0
+REF  P1 W13 c0a8 s0 e0 m0
+ORIG P0 W77 xxxx s0 e0 m0
+REF  P1 W14 010a s0 e0 m0
+ORIG P0 W78 xxxx s0 e0 m0
+REF  P1 W15 c0a8 s0 e0 m0
+ORIG P0 W79 xxxx s0 e0 m0
+REF  P1 W16 0109 s0 e0 m0
+ORIG P0 W80 xxxx s0 e0 m0
+REF  P1 W17 1388 s0 e0 m0
+ORIG P0 W81 0bb8 s0 e0 m0
+REF  P1 W18 0bb8 s0 e0 m0
+ORIG P0 W82 0000 s0 e0 m0
+REF  P1 W19 000b s0 e0 m0
+ORIG P0 W83 0014 s0 e0 m0
+REF  P1 W20 3b23 s0 e0 m0
+ORIG P0 W84 zzzz s0 e0 m0
+REF  P1 W21 0011 s0 e0 m0
+ORIG P0 W85 xxxx s0 e0 m0
+REF  P1 W22 2200 s0 e1 m1
+REF  P1 END n=23
+ORIG P0 W86 xxxx s0 e0 m0
+ORIG P0 W87 xxxx s0 e0 m0
+ORIG P0 W88 xxxx s0 e0 m0
+ORIG P0 W89 0bb8 s0 e0 m0
+ORIG P0 W90 0000 s0 e0 m0
+ORIG P0 W91 0014 s0 e0 m0
+ORIG P0 W92 zzzz s0 e0 m0
+ORIG P0 W93 xxxx s0 e0 m0
+ORIG P0 W94 xxxx s0 e0 m0
+ORIG P0 W95 xxxx s0 e0 m0
+ORIG P0 W96 xxxx s0 e0 m0
+ORIG P0 W97 0bb8 s0 e0 m0
+ORIG P0 W98 0000 s0 e0 m0
+ORIG P0 W99 0014 s0 e0 m0
+ORIG P0 W100 zzzz s0 e0 m0
+ORIG P0 W101 xxxx s0 e0 m0
+ORIG P0 W102 xxxx s0 e0 m0
+ORIG P0 W103 xxxx s0 e0 m0
+ORIG P0 W104 xxxx s0 e0 m0
+ORIG P0 W105 0bb8 s0 e0 m0
+ORIG P0 W106 0000 s0 e0 m0
+ORIG P0 W107 0014 s0 e0 m0
+ORIG P0 W108 zzzz s0 e0 m0
+ORIG P0 W109 xxxx s0 e0 m0
+ORIG P0 W110 xxxx s0 e0 m0
+ORIG P0 W111 xxxx s0 e0 m0
+ORIG P0 W112 xxxx s0 e0 m0
+ORIG P0 W113 0bb8 s0 e0 m0
+ORIG P0 W114 0000 s0 e0 m0
+ORIG P0 W115 0014 s0 e0 m0
+ORIG P0 W116 zzzz s0 e0 m0
+ORIG P0 W117 xxxx s0 e0 m0
+ORIG P0 W118 xxxx s0 e0 m0
+==== CASE3 back-to-back ====
+ORIG P0 W119 xxxx s0 e0 m0
+ORIG P0 W120 xxxx s0 e0 m0
+ORIG P0 W121 0bb8 s0 e0 m0
+ORIG P0 W122 0000 s0 e0 m0
+ORIG P0 W123 0014 s0 e0 m0
+ORIG P0 W124 zzzz s0 e0 m0
+ORIG P0 W125 xxxx s0 e0 m0
+REF  P2 W0 0102 s1 e0 m0
+ORIG P0 W126 xxxx s0 e0 m0
+REF  P2 W1 0304 s0 e0 m0
+ORIG P0 W127 xxxx s0 e0 m0
+REF  P2 W2 0506 s0 e0 m0
+ORIG P0 W128 xxxx s0 e0 m0
+REF  P2 W3 2c02 s0 e0 m0
+ORIG P0 W129 0bb8 s0 e0 m0
+REF  P2 W4 0304 s0 e0 m0
+ORIG P0 W130 0000 s0 e0 m0
+REF  P2 W5 0507 s0 e0 m0
+ORIG P0 W131 0014 s0 e0 m0
+REF  P2 W6 0800 s0 e0 m0
+ORIG P0 W132 zzzz s0 e0 m0
+REF  P2 W7 4500 s0 e0 m0
+ORIG P0 W133 xxxx s0 e0 m0
+REF  P2 W8 001e s0 e0 m0
+ORIG P0 W134 xxxx s0 e0 m0
+REF  P2 W9 0002 s0 e0 m0
+ORIG P0 W135 xxxx s0 e0 m0
+REF  P2 W10 0000 s0 e0 m0
+ORIG P0 W136 xxxx s0 e0 m0
+REF  P2 W11 ff11 s0 e0 m0
+ORIG P0 W137 0bb8 s0 e0 m0
+REF  P2 W12 3869 s0 e0 m0
+ORIG P0 W138 0000 s0 e0 m0
+REF  P2 W13 c0a8 s0 e0 m0
+ORIG P0 W139 0014 s0 e0 m0
+REF  P2 W14 010a s0 e0 m0
+ORIG P0 W140 zzzz s0 e0 m0
+REF  P2 W15 c0a8 s0 e0 m0
+ORIG P0 W141 xxxx s0 e0 m0
+REF  P2 W16 0109 s0 e0 m0
+ORIG P0 W142 xxxx s0 e0 m0
+REF  P2 W17 1388 s0 e0 m0
+ORIG P0 W143 xxxx s0 e0 m0
+REF  P2 W18 0bb8 s0 e0 m0
+ORIG P0 W144 xxxx s0 e0 m0
+REF  P2 W19 000a s0 e0 m0
+ORIG P0 W145 0bb8 s0 e0 m0
+REF  P2 W20 b28b s0 e0 m0
+ORIG P0 W146 0000 s0 e0 m0
+REF  P2 W21 aaaa s0 e1 m0
+REF  P2 END n=22
+ORIG P0 W147 0014 s0 e0 m0
+ORIG P0 W148 zzzz s0 e0 m0
+REF  P3 W0 0102 s1 e0 m0
+ORIG P0 W149 xxxx s0 e0 m0
+REF  P3 W1 0304 s0 e0 m0
+ORIG P0 W150 xxxx s0 e0 m0
+REF  P3 W2 0506 s0 e0 m0
+ORIG P0 W151 xxxx s0 e0 m0
+REF  P3 W3 2c02 s0 e0 m0
+ORIG P0 W152 xxxx s0 e0 m0
+REF  P3 W4 0304 s0 e0 m0
+ORIG P0 W153 0bb8 s0 e0 m0
+REF  P3 W5 0507 s0 e0 m0
+ORIG P0 W154 0000 s0 e0 m0
+REF  P3 W6 0800 s0 e0 m0
+ORIG P0 W155 0014 s0 e0 m0
+REF  P3 W7 4500 s0 e0 m0
+ORIG P0 W156 zzzz s0 e0 m0
+REF  P3 W8 001e s0 e0 m0
+ORIG P0 W157 xxxx s0 e0 m0
+REF  P3 W9 0003 s0 e0 m0
+ORIG P0 W158 xxxx s0 e0 m0
+REF  P3 W10 0000 s0 e0 m0
+ORIG P0 W159 xxxx s0 e0 m0
+REF  P3 W11 ff11 s0 e0 m0
+ORIG P0 W160 xxxx s0 e0 m0
+REF  P3 W12 3868 s0 e0 m0
+ORIG P0 W161 0bb8 s0 e0 m0
+REF  P3 W13 c0a8 s0 e0 m0
+ORIG P0 W162 0000 s0 e0 m0
+REF  P3 W14 010a s0 e0 m0
+ORIG P0 W163 0014 s0 e0 m0
+REF  P3 W15 c0a8 s0 e0 m0
+ORIG P0 W164 zzzz s0 e0 m0
+REF  P3 W16 0109 s0 e0 m0
+ORIG P0 W165 xxxx s0 e0 m0
+REF  P3 W17 1388 s0 e0 m0
+ORIG P0 W166 xxxx s0 e0 m0
+REF  P3 W18 0bb8 s0 e0 m0
+ORIG P0 W167 xxxx s0 e0 m0
+REF  P3 W19 000a s0 e0 m0
+ORIG P0 W168 xxxx s0 e0 m0
+REF  P3 W20 a17a s0 e0 m0
+ORIG P0 W169 0bb8 s0 e0 m0
+REF  P3 W21 bbbb s0 e1 m0
+REF  P3 END n=22
+ORIG P0 W170 0000 s0 e0 m0
+ORIG P0 W171 0014 s0 e0 m0
+ORIG P0 W172 zzzz s0 e0 m0
+ORIG P0 W173 xxxx s0 e0 m0
+ORIG P0 W174 xxxx s0 e0 m0
+ORIG P0 W175 xxxx s0 e0 m0
+ORIG P0 W176 xxxx s0 e0 m0
+ORIG P0 W177 0bb8 s0 e0 m0
+ORIG P0 W178 0000 s0 e0 m0
+ORIG P0 W179 0014 s0 e0 m0
+ORIG P0 W180 zzzz s0 e0 m0
+ORIG P0 W181 xxxx s0 e0 m0
+==== CASE4 long packet ====
+ORIG P0 W182 xxxx s0 e0 m0
+ORIG P0 W183 xxxx s0 e0 m0
+ORIG P0 W184 xxxx s0 e0 m0
+ORIG P0 W185 0bb8 s0 e0 m0
+ORIG P0 W186 0000 s0 e0 m0
+ORIG P0 W187 0014 s0 e0 m0
+ORIG P0 W188 zzzz s0 e0 m0
+ORIG P0 W189 xxxx s0 e0 m0
+ORIG P0 W190 xxxx s0 e0 m0
+ORIG P0 W191 xxxx s0 e0 m0
+ORIG P0 W192 xxxx s0 e0 m0
+ORIG P0 W193 0bb8 s0 e0 m0
+ORIG P0 W194 0000 s0 e0 m0
+ORIG P0 W195 0014 s0 e0 m0
+ORIG P0 W196 zzzz s0 e0 m0
+ORIG P0 W197 xxxx s0 e0 m0
+ORIG P0 W198 xxxx s0 e0 m0
+ORIG P0 W199 xxxx s0 e0 m0
+ORIG P0 W200 xxxx s0 e0 m0
+ORIG P0 W201 0bb8 s0 e0 m0
+ORIG P0 W202 0000 s0 e0 m0
+ORIG P0 W203 0014 s0 e0 m0
+ORIG P0 W204 zzzz s0 e0 m0
+ORIG P0 W205 xxxx s0 e0 m0
+ORIG P0 W206 xxxx s0 e0 m0
+ORIG P0 W207 xxxx s0 e0 m0
+ORIG P0 W208 xxxx s0 e0 m0
+ORIG P0 W209 0bb8 s0 e0 m0
+ORIG P0 W210 0000 s0 e0 m0
+ORIG P0 W211 0014 s0 e0 m0
+ORIG P0 W212 zzzz s0 e0 m0
+ORIG P0 W213 xxxx s0 e0 m0
+ORIG P0 W214 xxxx s0 e0 m0
+ORIG P0 W215 xxxx s0 e0 m0
+ORIG P0 W216 xxxx s0 e0 m0
+ORIG P0 W217 0bb8 s0 e0 m0
+ORIG P0 W218 0000 s0 e0 m0
+ORIG P0 W219 0014 s0 e0 m0
+ORIG P0 W220 zzzz s0 e0 m0
+ORIG P0 W221 xxxx s0 e0 m0
+ORIG P0 W222 xxxx s0 e0 m0
+ORIG P0 W223 xxxx s0 e0 m0
+ORIG P0 W224 xxxx s0 e0 m0
+ORIG P0 W225 0bb8 s0 e0 m0
+ORIG P0 W226 0000 s0 e0 m0
+ORIG P0 W227 0014 s0 e0 m0
+ORIG P0 W228 zzzz s0 e0 m0
+ORIG P0 W229 xxxx s0 e0 m0
+ORIG P0 W230 xxxx s0 e0 m0
+ORIG P0 W231 xxxx s0 e0 m0
+ORIG P0 W232 xxxx s0 e0 m0
+ORIG P0 W233 0bb8 s0 e0 m0
+ORIG P0 W234 0000 s0 e0 m0
+ORIG P0 W235 0014 s0 e0 m0
+ORIG P0 W236 zzzz s0 e0 m0
+ORIG P0 W237 xxxx s0 e0 m0
+ORIG P0 W238 xxxx s0 e0 m0
+ORIG P0 W239 xxxx s0 e0 m0
+ORIG P0 W240 xxxx s0 e0 m0
+ORIG P0 W241 0bb8 s0 e0 m0
+ORIG P0 W242 0000 s0 e0 m0
+ORIG P0 W243 0014 s0 e0 m0
+ORIG P0 W244 zzzz s0 e0 m0
+ORIG P0 W245 xxxx s0 e0 m0
+ORIG P0 W246 xxxx s0 e0 m0
+ORIG P0 W247 xxxx s0 e0 m0
+ORIG P0 W248 xxxx s0 e0 m0
+ORIG P0 W249 0bb8 s0 e0 m0
+ORIG P0 W250 0000 s0 e0 m0
+ORIG P0 W251 0014 s0 e0 m0
+REF  P4 W0 0102 s1 e0 m0
+ORIG P0 W252 zzzz s0 e0 m0
+REF  P4 W1 0304 s0 e0 m0
+ORIG P0 W253 xxxx s0 e0 m0
+REF  P4 W2 0506 s0 e0 m0
+ORIG P0 W254 xxxx s0 e0 m0
+REF  P4 W3 2c02 s0 e0 m0
+ORIG P0 W255 xxxx s0 e0 m0
+REF  P4 W4 0304 s0 e0 m0
+ORIG P0 W256 xxxx s0 e0 m0
+REF  P4 W5 0507 s0 e0 m0
+ORIG P0 W257 0bb8 s0 e0 m0
+REF  P4 W6 0800 s0 e0 m0
+ORIG P0 W258 0000 s0 e0 m0
+REF  P4 W7 4500 s0 e0 m0
+ORIG P0 W259 0014 s0 e0 m0
+REF  P4 W8 009c s0 e0 m0
+ORIG P0 W260 zzzz s0 e0 m0
+REF  P4 W9 0004 s0 e0 m0
+ORIG P0 W261 xxxx s0 e0 m0
+REF  P4 W10 0000 s0 e0 m0
+ORIG P0 W262 xxxx s0 e0 m0
+REF  P4 W11 ff11 s0 e0 m0
+ORIG P0 W263 xxxx s0 e0 m0
+REF  P4 W12 37e9 s0 e0 m0
+ORIG P0 W264 xxxx s0 e0 m0
+REF  P4 W13 c0a8 s0 e0 m0
+ORIG P0 W265 0bb8 s0 e0 m0
+REF  P4 W14 010a s0 e0 m0
+ORIG P0 W266 0000 s0 e0 m0
+REF  P4 W15 c0a8 s0 e0 m0
+ORIG P0 W267 0014 s0 e0 m0
+REF  P4 W16 0109 s0 e0 m0
+ORIG P0 W268 zzzz s0 e0 m0
+REF  P4 W17 1388 s0 e0 m0
+ORIG P0 W269 xxxx s0 e0 m0
+REF  P4 W18 0bb8 s0 e0 m0
+ORIG P0 W270 xxxx s0 e0 m0
+REF  P4 W19 0088 s0 e0 m0
+ORIG P0 W271 xxxx s0 e0 m0
+REF  P4 W20 141a s0 e0 m0
+ORIG P0 W272 xxxx s0 e0 m0
+REF  P4 W21 0101 s0 e0 m0
+ORIG P0 W273 0bb8 s0 e0 m0
+REF  P4 W22 0102 s0 e0 m0
+ORIG P0 W274 0000 s0 e0 m0
+REF  P4 W23 0103 s0 e0 m0
+ORIG P0 W275 0014 s0 e0 m0
+REF  P4 W24 0104 s0 e0 m0
+ORIG P0 W276 zzzz s0 e0 m0
+REF  P4 W25 0105 s0 e0 m0
+ORIG P0 W277 xxxx s0 e0 m0
+REF  P4 W26 0106 s0 e0 m0
+ORIG P0 W278 xxxx s0 e0 m0
+REF  P4 W27 0107 s0 e0 m0
+ORIG P0 W279 xxxx s0 e0 m0
+REF  P4 W28 0108 s0 e0 m0
+ORIG P0 W280 xxxx s0 e0 m0
+REF  P4 W29 0109 s0 e0 m0
+ORIG P0 W281 0bb8 s0 e0 m0
+REF  P4 W30 010a s0 e0 m0
+ORIG P0 W282 0000 s0 e0 m0
+REF  P4 W31 010b s0 e0 m0
+ORIG P0 W283 0014 s0 e0 m0
+REF  P4 W32 010c s0 e0 m0
+ORIG P0 W284 zzzz s0 e0 m0
+REF  P4 W33 010d s0 e0 m0
+ORIG P0 W285 xxxx s0 e0 m0
+REF  P4 W34 010e s0 e0 m0
+ORIG P0 W286 xxxx s0 e0 m0
+REF  P4 W35 010f s0 e0 m0
+ORIG P0 W287 xxxx s0 e0 m0
+REF  P4 W36 0110 s0 e0 m0
+ORIG P0 W288 xxxx s0 e0 m0
+REF  P4 W37 0111 s0 e0 m0
+ORIG P0 W289 0bb8 s0 e0 m0
+REF  P4 W38 0112 s0 e0 m0
+ORIG P0 W290 0000 s0 e0 m0
+REF  P4 W39 0113 s0 e0 m0
+ORIG P0 W291 0014 s0 e0 m0
+REF  P4 W40 0114 s0 e0 m0
+ORIG P0 W292 zzzz s0 e0 m0
+REF  P4 W41 0115 s0 e0 m0
+ORIG P0 W293 xxxx s0 e0 m0
+REF  P4 W42 0116 s0 e0 m0
+ORIG P0 W294 xxxx s0 e0 m0
+REF  P4 W43 0117 s0 e0 m0
+ORIG P0 W295 xxxx s0 e0 m0
+REF  P4 W44 0118 s0 e0 m0
+ORIG P0 W296 xxxx s0 e0 m0
+REF  P4 W45 0119 s0 e0 m0
+ORIG P0 W297 0bb8 s0 e0 m0
+REF  P4 W46 011a s0 e0 m0
+ORIG P0 W298 0000 s0 e0 m0
+REF  P4 W47 011b s0 e0 m0
+ORIG P0 W299 0014 s0 e0 m0
+REF  P4 W48 011c s0 e0 m0
+ORIG P0 W300 zzzz s0 e0 m0
+REF  P4 W49 011d s0 e0 m0
+ORIG P0 W301 xxxx s0 e0 m0
+REF  P4 W50 011e s0 e0 m0
+ORIG P0 W302 xxxx s0 e0 m0
+REF  P4 W51 011f s0 e0 m0
+ORIG P0 W303 xxxx s0 e0 m0
+REF  P4 W52 0120 s0 e0 m0
+ORIG P0 W304 xxxx s0 e0 m0
+REF  P4 W53 0121 s0 e0 m0
+ORIG P0 W305 0bb8 s0 e0 m0
+REF  P4 W54 0122 s0 e0 m0
+ORIG P0 W306 0000 s0 e0 m0
+REF  P4 W55 0123 s0 e0 m0
+ORIG P0 W307 0014 s0 e0 m0
+REF  P4 W56 0124 s0 e0 m0
+ORIG P0 W308 zzzz s0 e0 m0
+REF  P4 W57 0125 s0 e0 m0
+ORIG P0 W309 xxxx s0 e0 m0
+REF  P4 W58 0126 s0 e0 m0
+ORIG P0 W310 xxxx s0 e0 m0
+REF  P4 W59 0127 s0 e0 m0
+ORIG P0 W311 xxxx s0 e0 m0
+REF  P4 W60 0128 s0 e0 m0
+ORIG P0 W312 xxxx s0 e0 m0
+REF  P4 W61 0129 s0 e0 m0
+ORIG P0 W313 0bb8 s0 e0 m0
+REF  P4 W62 012a s0 e0 m0
+ORIG P0 W314 0000 s0 e0 m0
+REF  P4 W63 012b s0 e0 m0
+ORIG P0 W315 0014 s0 e0 m0
+REF  P4 W64 012c s0 e0 m0
+ORIG P0 W316 zzzz s0 e0 m0
+REF  P4 W65 012d s0 e0 m0
+ORIG P0 W317 xxxx s0 e0 m0
+REF  P4 W66 012e s0 e0 m0
+ORIG P0 W318 xxxx s0 e0 m0
+REF  P4 W67 012f s0 e0 m0
+ORIG P0 W319 xxxx s0 e0 m0
+REF  P4 W68 0130 s0 e0 m0
+ORIG P0 W320 xxxx s0 e0 m0
+REF  P4 W69 0131 s0 e0 m0
+ORIG P0 W321 0bb8 s0 e0 m0
+REF  P4 W70 0132 s0 e0 m0
+ORIG P0 W322 0000 s0 e0 m0
+REF  P4 W71 0133 s0 e0 m0
+ORIG P0 W323 0014 s0 e0 m0
+REF  P4 W72 0134 s0 e0 m0
+ORIG P0 W324 zzzz s0 e0 m0
+REF  P4 W73 0135 s0 e0 m0
+ORIG P0 W325 xxxx s0 e0 m0
+REF  P4 W74 0136 s0 e0 m0
+ORIG P0 W326 xxxx s0 e0 m0
+REF  P4 W75 0137 s0 e0 m0
+ORIG P0 W327 xxxx s0 e0 m0
+REF  P4 W76 0138 s0 e0 m0
+ORIG P0 W328 xxxx s0 e0 m0
+REF  P4 W77 0139 s0 e0 m0
+ORIG P0 W329 0bb8 s0 e0 m0
+REF  P4 W78 013a s0 e0 m0
+ORIG P0 W330 0000 s0 e0 m0
+REF  P4 W79 013b s0 e0 m0
+ORIG P0 W331 0014 s0 e0 m0
+REF  P4 W80 013c s0 e0 m0
+ORIG P0 W332 zzzz s0 e0 m0
+REF  P4 W81 013d s0 e0 m0
+ORIG P0 W333 xxxx s0 e0 m0
+REF  P4 W82 013e s0 e0 m0
+ORIG P0 W334 xxxx s0 e0 m0
+REF  P4 W83 013f s0 e0 m0
+ORIG P0 W335 xxxx s0 e0 m0
+REF  P4 W84 0140 s0 e1 m0
+REF  P4 END n=85
+ORIG P0 W336 xxxx s0 e0 m0
+ORIG P0 W337 0bb8 s0 e0 m0
+ORIG P0 W338 0000 s0 e0 m0
+ORIG P0 W339 0014 s0 e0 m0
+ORIG P0 W340 zzzz s0 e0 m0
+ORIG P0 W341 xxxx s0 e0 m0
+ORIG P0 W342 xxxx s0 e0 m0
+ORIG P0 W343 xxxx s0 e0 m0
+ORIG P0 W344 xxxx s0 e0 m0
+ORIG P0 W345 0bb8 s0 e0 m0
+ORIG P0 W346 0000 s0 e0 m0
+ORIG P0 W347 0014 s0 e0 m0
+ORIG P0 W348 zzzz s0 e0 m0
+ORIG P0 W349 xxxx s0 e0 m0
+ORIG P0 W350 xxxx s0 e0 m0
+ORIG P0 W351 xxxx s0 e0 m0
+ORIG P0 W352 xxxx s0 e0 m0
+ORIG P0 W353 0bb8 s0 e0 m0
+ORIG P0 W354 0000 s0 e0 m0
+ORIG P0 W355 0014 s0 e0 m0
+ORIG P0 W356 zzzz s0 e0 m0
+ORIG P0 W357 xxxx s0 e0 m0
+ORIG P0 W358 xxxx s0 e0 m0
+ORIG P0 W359 xxxx s0 e0 m0
+ORIG P0 W360 xxxx s0 e0 m0
+ORIG P0 W361 0bb8 s0 e0 m0
+ORIG P0 W362 0000 s0 e0 m0
+ORIG P0 W363 0014 s0 e0 m0
+ORIG P0 W364 zzzz s0 e0 m0
+ORIG P0 W365 xxxx s0 e0 m0
+ORIG P0 W366 xxxx s0 e0 m0
+ORIG P0 W367 xxxx s0 e0 m0
+ORIG P0 W368 xxxx s0 e0 m0
+ORIG P0 W369 0bb8 s0 e0 m0
+ORIG P0 W370 0000 s0 e0 m0
+ORIG P0 W371 0014 s0 e0 m0
+ORIG P0 W372 zzzz s0 e0 m0
+ORIG P0 W373 xxxx s0 e0 m0
+ORIG P0 W374 xxxx s0 e0 m0
+ORIG P0 W375 xxxx s0 e0 m0
+ORIG P0 W376 xxxx s0 e0 m0
+ORIG P0 W377 0bb8 s0 e0 m0
+ORIG P0 W378 0000 s0 e0 m0
+ORIG P0 W379 0014 s0 e0 m0
+ORIG P0 W380 zzzz s0 e0 m0
+ORIG P0 W381 xxxx s0 e0 m0
+ORIG P0 W382 xxxx s0 e0 m0
+ORIG P0 W383 xxxx s0 e0 m0
+ORIG P0 W384 xxxx s0 e0 m0
+ORIG P0 W385 0bb8 s0 e0 m0
+ORIG P0 W386 0000 s0 e0 m0
+ORIG P0 W387 0014 s0 e0 m0
+ORIG P0 W388 zzzz s0 e0 m0
+ORIG P0 W389 xxxx s0 e0 m0
+ORIG P0 W390 xxxx s0 e0 m0
+ORIG P0 W391 xxxx s0 e0 m0
+ORIG P0 W392 xxxx s0 e0 m0
+ORIG P0 W393 0bb8 s0 e0 m0
+ORIG P0 W394 0000 s0 e0 m0
+ORIG P0 W395 0014 s0 e0 m0
+ORIG P0 W396 zzzz s0 e0 m0
+ORIG P0 W397 xxxx s0 e0 m0
+ORIG P0 W398 xxxx s0 e0 m0
+ORIG P0 W399 xxxx s0 e0 m0
+ORIG P0 W400 xxxx s0 e0 m0
+ORIG P0 W401 0bb8 s0 e0 m0
+ORIG P0 W402 0000 s0 e0 m0
+ORIG P0 W403 0014 s0 e0 m0
+ORIG P0 W404 zzzz s0 e0 m0
+ORIG P0 W405 xxxx s0 e0 m0
+ORIG P0 W406 xxxx s0 e0 m0
+ORIG P0 W407 xxxx s0 e0 m0
+ORIG P0 W408 xxxx s0 e0 m0
+ORIG P0 W409 0bb8 s0 e0 m0
+ORIG P0 W410 0000 s0 e0 m0
+ORIG P0 W411 0014 s0 e0 m0
+ORIG P0 W412 zzzz s0 e0 m0
+ORIG P0 W413 xxxx s0 e0 m0
+ORIG P0 W414 xxxx s0 e0 m0
+ORIG P0 W415 xxxx s0 e0 m0
+ORIG P0 W416 xxxx s0 e0 m0
+ORIG P0 W417 0bb8 s0 e0 m0
+ORIG P0 W418 0000 s0 e0 m0
+ORIG P0 W419 0014 s0 e0 m0
+ORIG P0 W420 zzzz s0 e0 m0
+ORIG P0 W421 xxxx s0 e0 m0
+ORIG P0 W422 xxxx s0 e0 m0
+ORIG P0 W423 xxxx s0 e0 m0
+ORIG P0 W424 xxxx s0 e0 m0
+ORIG P0 W425 0bb8 s0 e0 m0
+ORIG P0 W426 0000 s0 e0 m0
+ORIG P0 W427 0014 s0 e0 m0
+ORIG P0 W428 zzzz s0 e0 m0
+ORIG P0 W429 xxxx s0 e0 m0
+ORIG P0 W430 xxxx s0 e0 m0
+ORIG P0 W431 xxxx s0 e0 m0
+ORIG P0 W432 xxxx s0 e0 m0
+ORIG P0 W433 0bb8 s0 e0 m0
+ORIG P0 W434 0000 s0 e0 m0
+ORIG P0 W435 0014 s0 e0 m0
+ORIG P0 W436 zzzz s0 e0 m0
+ORIG P0 W437 xxxx s0 e0 m0
+ORIG P0 W438 xxxx s0 e0 m0
+ORIG P0 W439 xxxx s0 e0 m0
+ORIG P0 W440 xxxx s0 e0 m0
+ORIG P0 W441 0bb8 s0 e0 m0
+ORIG P0 W442 0000 s0 e0 m0
+ORIG P0 W443 0014 s0 e0 m0
+ORIG P0 W444 zzzz s0 e0 m0
+ORIG P0 W445 xxxx s0 e0 m0
+ORIG P0 W446 xxxx s0 e0 m0
+==== SIM DONE ====
+$finish called at time : 4700 ns : File "D:/coding/verilog/xc7k70t/project_ethernet/sim_verify/tb_compare.v" Line 175
+exit
+INFO: [Common 17-206] Exiting xsim at Wed Oct  7 19:43:47 2026...

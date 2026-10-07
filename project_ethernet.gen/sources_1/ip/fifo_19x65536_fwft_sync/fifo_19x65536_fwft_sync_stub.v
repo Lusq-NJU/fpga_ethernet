@@ -1,0 +1,27 @@
+// Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+// --------------------------------------------------------------------------------
+// Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+// Date        : Wed Oct  7 15:40:03 2026
+// Host        : null running 64-bit major release  (build 9200)
+// Command     : write_verilog -force -mode synth_stub
+//               d:/coding/verilog/xc7k70t/project_ethernet/project_ethernet.gen/sources_1/ip/fifo_19x65536_fwft_sync/fifo_19x65536_fwft_sync_stub.v
+// Design      : fifo_19x65536_fwft_sync
+// Purpose     : Stub declaration of top-level module interface
+// Device      : xc7k70tfbg676-2
+// --------------------------------------------------------------------------------
+
+// This empty module with port declaration file causes synthesis tools to infer a black box for IP.
+// The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
+// Please paste the declaration into a Verilog source file or add the file as an additional source.
+(* x_core_info = "fifo_generator_v13_2_5,Vivado 2020.2" *)
+module fifo_19x65536_fwft_sync(clk, srst, din, wr_en, rd_en, dout, full, empty)
+/* synthesis syn_black_box black_box_pad_pin="clk,srst,din[18:0],wr_en,rd_en,dout[18:0],full,empty" */;
+  input clk;
+  input srst;
+  input [18:0]din;
+  input wr_en;
+  input rd_en;
+  output [18:0]dout;
+  output full;
+  output empty;
+endmodule

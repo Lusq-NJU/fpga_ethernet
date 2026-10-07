@@ -1,0 +1,1 @@
+-L "unisims_ver" "work.tb_compare" "work.glbl" -s "tb_r4" 

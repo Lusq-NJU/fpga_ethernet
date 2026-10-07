@@ -1,0 +1,672 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Wed Oct  7 21:45:56 2026
+| Host         : null running 64-bit major release  (build 9200)
+| Command      : report_timing -from [get_cells -hier -filter {NAME =~ *ip_sum* || NAME =~ *udp_sum* || NAME =~ *u_tx_message_fifo*}] -max_paths 10 -file timing_checksum_r3.rpt
+| Design       : ethernet_tx_pack
+| Device       : 7k70t-fbg676
+| Speed File   : -2  PRODUCTION 1.12 2017-02-17
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Timing Report
+
+Slack (MET) :             5.681ns  (required time - arrival time)
+  Source:                 u_tx_message_fifo/rd_ptr_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            r_udp_head_sum_reg[17]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        3.806ns  (logic 1.390ns (36.521%)  route 2.416ns (63.479%))
+  Logic Levels:           8  (CARRY4=5 LUT6=2 RAMD32=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.535ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=227, unset)          0.537     0.537    u_tx_message_fifo/clk
+                         FDRE                                         r  u_tx_message_fifo/rd_ptr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.223     0.760 r  u_tx_message_fifo/rd_ptr_reg[0]/Q
+                         net (fo=42, unplaced)        0.605     1.365    u_tx_message_fifo/mem_reg_0_15_18_23/ADDRA0
+                         RAMD32 (Prop_ramd32_RADR0_O)
+                                                      0.123     1.488 r  u_tx_message_fifo/mem_reg_0_15_18_23/RAMA_D1/O
+                         net (fo=4, unplaced)         0.521     2.009    u_tx_message_fifo/p_0_in[3]
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.250     2.259 r  u_tx_message_fifo/dout_data_reg[5]_i_10/CO[3]
+                         net (fo=1, unplaced)         0.000     2.259    u_tx_message_fifo/dout_data_reg[5]_i_10_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.053     2.312 r  u_tx_message_fifo/dout_data_reg[9]_i_10/CO[3]
+                         net (fo=1, unplaced)         0.000     2.312    u_tx_message_fifo/dout_data_reg[9]_i_10_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.155     2.467 r  u_tx_message_fifo/dout_data_reg[13]_i_10/O[3]
+                         net (fo=3, unplaced)         0.512     2.979    u_tx_message_fifo/data32[11]
+                         LUT6 (Prop_lut6_I3_O)        0.120     3.099 f  u_tx_message_fifo/r_udp_head_sum[12]_i_18/O
+                         net (fo=1, unplaced)         0.270     3.369    u_tx_data_fifo/r_udp_head_sum_reg[15]_4
+                         LUT6 (Prop_lut6_I5_O)        0.043     3.412 r  u_tx_data_fifo/r_udp_head_sum[12]_i_4/O
+                         net (fo=2, unplaced)         0.508     3.920    u_tx_data_fifo/r_udp_head_sum[12]_i_4_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.250     4.170 r  u_tx_data_fifo/r_udp_head_sum_reg[12]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     4.170    u_tx_data_fifo/r_udp_head_sum_reg[12]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.173     4.343 r  u_tx_data_fifo/r_udp_head_sum_reg[16]_i_1/O[1]
+                         net (fo=1, unplaced)         0.000     4.343    u_tx_data_fifo_n_41
+                         FDCE                                         r  r_udp_head_sum_reg[17]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+                                                      0.000    10.000 r  clk (IN)
+                         net (fo=227, unset)          0.510    10.510    clk
+                         FDCE                                         r  r_udp_head_sum_reg[17]/C
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.535     9.975    
+                         FDCE (Setup_fdce_C_D)        0.049    10.024    r_udp_head_sum_reg[17]
+  -------------------------------------------------------------------
+                         required time                         10.024    
+                         arrival time                          -4.343    
+  -------------------------------------------------------------------
+                         slack                                  5.681    
+
+Slack (MET) :             5.699ns  (required time - arrival time)
+  Source:                 u_tx_message_fifo/rd_ptr_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            r_udp_head_sum_reg[19]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        3.788ns  (logic 1.372ns (36.220%)  route 2.416ns (63.780%))
+  Logic Levels:           8  (CARRY4=5 LUT6=2 RAMD32=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.535ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=227, unset)          0.537     0.537    u_tx_message_fifo/clk
+                         FDRE                                         r  u_tx_message_fifo/rd_ptr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.223     0.760 r  u_tx_message_fifo/rd_ptr_reg[0]/Q
+                         net (fo=42, unplaced)        0.605     1.365    u_tx_message_fifo/mem_reg_0_15_18_23/ADDRA0
+                         RAMD32 (Prop_ramd32_RADR0_O)
+                                                      0.123     1.488 r  u_tx_message_fifo/mem_reg_0_15_18_23/RAMA_D1/O
+                         net (fo=4, unplaced)         0.521     2.009    u_tx_message_fifo/p_0_in[3]
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.250     2.259 r  u_tx_message_fifo/dout_data_reg[5]_i_10/CO[3]
+                         net (fo=1, unplaced)         0.000     2.259    u_tx_message_fifo/dout_data_reg[5]_i_10_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.053     2.312 r  u_tx_message_fifo/dout_data_reg[9]_i_10/CO[3]
+                         net (fo=1, unplaced)         0.000     2.312    u_tx_message_fifo/dout_data_reg[9]_i_10_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.155     2.467 r  u_tx_message_fifo/dout_data_reg[13]_i_10/O[3]
+                         net (fo=3, unplaced)         0.512     2.979    u_tx_message_fifo/data32[11]
+                         LUT6 (Prop_lut6_I3_O)        0.120     3.099 f  u_tx_message_fifo/r_udp_head_sum[12]_i_18/O
+                         net (fo=1, unplaced)         0.270     3.369    u_tx_data_fifo/r_udp_head_sum_reg[15]_4
+                         LUT6 (Prop_lut6_I5_O)        0.043     3.412 r  u_tx_data_fifo/r_udp_head_sum[12]_i_4/O
+                         net (fo=2, unplaced)         0.508     3.920    u_tx_data_fifo/r_udp_head_sum[12]_i_4_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.250     4.170 r  u_tx_data_fifo/r_udp_head_sum_reg[12]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     4.170    u_tx_data_fifo/r_udp_head_sum_reg[12]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.155     4.325 r  u_tx_data_fifo/r_udp_head_sum_reg[16]_i_1/O[3]
+                         net (fo=1, unplaced)         0.000     4.325    u_tx_data_fifo_n_39
+                         FDCE                                         r  r_udp_head_sum_reg[19]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+                                                      0.000    10.000 r  clk (IN)
+                         net (fo=227, unset)          0.510    10.510    clk
+                         FDCE                                         r  r_udp_head_sum_reg[19]/C
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.535     9.975    
+                         FDCE (Setup_fdce_C_D)        0.049    10.024    r_udp_head_sum_reg[19]
+  -------------------------------------------------------------------
+                         required time                         10.024    
+                         arrival time                          -4.325    
+  -------------------------------------------------------------------
+                         slack                                  5.699    
+
+Slack (MET) :             5.734ns  (required time - arrival time)
+  Source:                 u_tx_message_fifo/rd_ptr_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            r_udp_head_sum_reg[13]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        3.753ns  (logic 1.337ns (35.625%)  route 2.416ns (64.375%))
+  Logic Levels:           7  (CARRY4=4 LUT6=2 RAMD32=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.535ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=227, unset)          0.537     0.537    u_tx_message_fifo/clk
+                         FDRE                                         r  u_tx_message_fifo/rd_ptr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.223     0.760 r  u_tx_message_fifo/rd_ptr_reg[0]/Q
+                         net (fo=42, unplaced)        0.605     1.365    u_tx_message_fifo/mem_reg_0_15_18_23/ADDRA0
+                         RAMD32 (Prop_ramd32_RADR0_O)
+                                                      0.123     1.488 r  u_tx_message_fifo/mem_reg_0_15_18_23/RAMA_D1/O
+                         net (fo=4, unplaced)         0.521     2.009    u_tx_message_fifo/p_0_in[3]
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.250     2.259 r  u_tx_message_fifo/dout_data_reg[5]_i_10/CO[3]
+                         net (fo=1, unplaced)         0.000     2.259    u_tx_message_fifo/dout_data_reg[5]_i_10_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.155     2.414 r  u_tx_message_fifo/dout_data_reg[9]_i_10/O[3]
+                         net (fo=3, unplaced)         0.512     2.926    u_tx_message_fifo/data32[7]
+                         LUT6 (Prop_lut6_I3_O)        0.120     3.046 f  u_tx_message_fifo/r_udp_head_sum[8]_i_18/O
+                         net (fo=1, unplaced)         0.270     3.316    u_tx_data_fifo/r_udp_head_sum_reg[11]_4
+                         LUT6 (Prop_lut6_I5_O)        0.043     3.359 r  u_tx_data_fifo/r_udp_head_sum[8]_i_4/O
+                         net (fo=2, unplaced)         0.508     3.867    u_tx_data_fifo/r_udp_head_sum[8]_i_4_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.250     4.117 r  u_tx_data_fifo/r_udp_head_sum_reg[8]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     4.117    u_tx_data_fifo/r_udp_head_sum_reg[8]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.173     4.290 r  u_tx_data_fifo/r_udp_head_sum_reg[12]_i_1/O[1]
+                         net (fo=1, unplaced)         0.000     4.290    u_tx_data_fifo_n_37
+                         FDCE                                         r  r_udp_head_sum_reg[13]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+                                                      0.000    10.000 r  clk (IN)
+                         net (fo=227, unset)          0.510    10.510    clk
+                         FDCE                                         r  r_udp_head_sum_reg[13]/C
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.535     9.975    
+                         FDCE (Setup_fdce_C_D)        0.049    10.024    r_udp_head_sum_reg[13]
+  -------------------------------------------------------------------
+                         required time                         10.024    
+                         arrival time                          -4.290    
+  -------------------------------------------------------------------
+                         slack                                  5.734    
+
+Slack (MET) :             5.735ns  (required time - arrival time)
+  Source:                 u_tx_message_fifo/rd_ptr_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            r_udp_head_sum_reg[18]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        3.752ns  (logic 1.336ns (35.608%)  route 2.416ns (64.392%))
+  Logic Levels:           8  (CARRY4=5 LUT6=2 RAMD32=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.535ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=227, unset)          0.537     0.537    u_tx_message_fifo/clk
+                         FDRE                                         r  u_tx_message_fifo/rd_ptr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.223     0.760 r  u_tx_message_fifo/rd_ptr_reg[0]/Q
+                         net (fo=42, unplaced)        0.605     1.365    u_tx_message_fifo/mem_reg_0_15_18_23/ADDRA0
+                         RAMD32 (Prop_ramd32_RADR0_O)
+                                                      0.123     1.488 r  u_tx_message_fifo/mem_reg_0_15_18_23/RAMA_D1/O
+                         net (fo=4, unplaced)         0.521     2.009    u_tx_message_fifo/p_0_in[3]
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.250     2.259 r  u_tx_message_fifo/dout_data_reg[5]_i_10/CO[3]
+                         net (fo=1, unplaced)         0.000     2.259    u_tx_message_fifo/dout_data_reg[5]_i_10_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.053     2.312 r  u_tx_message_fifo/dout_data_reg[9]_i_10/CO[3]
+                         net (fo=1, unplaced)         0.000     2.312    u_tx_message_fifo/dout_data_reg[9]_i_10_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.155     2.467 r  u_tx_message_fifo/dout_data_reg[13]_i_10/O[3]
+                         net (fo=3, unplaced)         0.512     2.979    u_tx_message_fifo/data32[11]
+                         LUT6 (Prop_lut6_I3_O)        0.120     3.099 f  u_tx_message_fifo/r_udp_head_sum[12]_i_18/O
+                         net (fo=1, unplaced)         0.270     3.369    u_tx_data_fifo/r_udp_head_sum_reg[15]_4
+                         LUT6 (Prop_lut6_I5_O)        0.043     3.412 r  u_tx_data_fifo/r_udp_head_sum[12]_i_4/O
+                         net (fo=2, unplaced)         0.508     3.920    u_tx_data_fifo/r_udp_head_sum[12]_i_4_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.250     4.170 r  u_tx_data_fifo/r_udp_head_sum_reg[12]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     4.170    u_tx_data_fifo/r_udp_head_sum_reg[12]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.119     4.289 r  u_tx_data_fifo/r_udp_head_sum_reg[16]_i_1/O[2]
+                         net (fo=1, unplaced)         0.000     4.289    u_tx_data_fifo_n_40
+                         FDCE                                         r  r_udp_head_sum_reg[18]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+                                                      0.000    10.000 r  clk (IN)
+                         net (fo=227, unset)          0.510    10.510    clk
+                         FDCE                                         r  r_udp_head_sum_reg[18]/C
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.535     9.975    
+                         FDCE (Setup_fdce_C_D)        0.049    10.024    r_udp_head_sum_reg[18]
+  -------------------------------------------------------------------
+                         required time                         10.024    
+                         arrival time                          -4.289    
+  -------------------------------------------------------------------
+                         slack                                  5.735    
+
+Slack (MET) :             5.737ns  (required time - arrival time)
+  Source:                 u_tx_message_fifo/rd_ptr_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            r_udp_head_sum_reg[16]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        3.750ns  (logic 1.334ns (35.573%)  route 2.416ns (64.427%))
+  Logic Levels:           8  (CARRY4=5 LUT6=2 RAMD32=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.535ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=227, unset)          0.537     0.537    u_tx_message_fifo/clk
+                         FDRE                                         r  u_tx_message_fifo/rd_ptr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.223     0.760 r  u_tx_message_fifo/rd_ptr_reg[0]/Q
+                         net (fo=42, unplaced)        0.605     1.365    u_tx_message_fifo/mem_reg_0_15_18_23/ADDRA0
+                         RAMD32 (Prop_ramd32_RADR0_O)
+                                                      0.123     1.488 r  u_tx_message_fifo/mem_reg_0_15_18_23/RAMA_D1/O
+                         net (fo=4, unplaced)         0.521     2.009    u_tx_message_fifo/p_0_in[3]
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.250     2.259 r  u_tx_message_fifo/dout_data_reg[5]_i_10/CO[3]
+                         net (fo=1, unplaced)         0.000     2.259    u_tx_message_fifo/dout_data_reg[5]_i_10_n_0
+                         CARRY4 (Prop_carry4_CI_CO[3])
+                                                      0.053     2.312 r  u_tx_message_fifo/dout_data_reg[9]_i_10/CO[3]
+                         net (fo=1, unplaced)         0.000     2.312    u_tx_message_fifo/dout_data_reg[9]_i_10_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.155     2.467 r  u_tx_message_fifo/dout_data_reg[13]_i_10/O[3]
+                         net (fo=3, unplaced)         0.512     2.979    u_tx_message_fifo/data32[11]
+                         LUT6 (Prop_lut6_I3_O)        0.120     3.099 f  u_tx_message_fifo/r_udp_head_sum[12]_i_18/O
+                         net (fo=1, unplaced)         0.270     3.369    u_tx_data_fifo/r_udp_head_sum_reg[15]_4
+                         LUT6 (Prop_lut6_I5_O)        0.043     3.412 r  u_tx_data_fifo/r_udp_head_sum[12]_i_4/O
+                         net (fo=2, unplaced)         0.508     3.920    u_tx_data_fifo/r_udp_head_sum[12]_i_4_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.250     4.170 r  u_tx_data_fifo/r_udp_head_sum_reg[12]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     4.170    u_tx_data_fifo/r_udp_head_sum_reg[12]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.117     4.287 r  u_tx_data_fifo/r_udp_head_sum_reg[16]_i_1/O[0]
+                         net (fo=1, unplaced)         0.000     4.287    u_tx_data_fifo_n_42
+                         FDCE                                         r  r_udp_head_sum_reg[16]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+                                                      0.000    10.000 r  clk (IN)
+                         net (fo=227, unset)          0.510    10.510    clk
+                         FDCE                                         r  r_udp_head_sum_reg[16]/C
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.535     9.975    
+                         FDCE (Setup_fdce_C_D)        0.049    10.024    r_udp_head_sum_reg[16]
+  -------------------------------------------------------------------
+                         required time                         10.024    
+                         arrival time                          -4.287    
+  -------------------------------------------------------------------
+                         slack                                  5.737    
+
+Slack (MET) :             5.752ns  (required time - arrival time)
+  Source:                 u_tx_message_fifo/rd_ptr_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            r_udp_head_sum_reg[15]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        3.735ns  (logic 1.319ns (35.315%)  route 2.416ns (64.685%))
+  Logic Levels:           7  (CARRY4=4 LUT6=2 RAMD32=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.535ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=227, unset)          0.537     0.537    u_tx_message_fifo/clk
+                         FDRE                                         r  u_tx_message_fifo/rd_ptr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.223     0.760 r  u_tx_message_fifo/rd_ptr_reg[0]/Q
+                         net (fo=42, unplaced)        0.605     1.365    u_tx_message_fifo/mem_reg_0_15_18_23/ADDRA0
+                         RAMD32 (Prop_ramd32_RADR0_O)
+                                                      0.123     1.488 r  u_tx_message_fifo/mem_reg_0_15_18_23/RAMA_D1/O
+                         net (fo=4, unplaced)         0.521     2.009    u_tx_message_fifo/p_0_in[3]
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.250     2.259 r  u_tx_message_fifo/dout_data_reg[5]_i_10/CO[3]
+                         net (fo=1, unplaced)         0.000     2.259    u_tx_message_fifo/dout_data_reg[5]_i_10_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.155     2.414 r  u_tx_message_fifo/dout_data_reg[9]_i_10/O[3]
+                         net (fo=3, unplaced)         0.512     2.926    u_tx_message_fifo/data32[7]
+                         LUT6 (Prop_lut6_I3_O)        0.120     3.046 f  u_tx_message_fifo/r_udp_head_sum[8]_i_18/O
+                         net (fo=1, unplaced)         0.270     3.316    u_tx_data_fifo/r_udp_head_sum_reg[11]_4
+                         LUT6 (Prop_lut6_I5_O)        0.043     3.359 r  u_tx_data_fifo/r_udp_head_sum[8]_i_4/O
+                         net (fo=2, unplaced)         0.508     3.867    u_tx_data_fifo/r_udp_head_sum[8]_i_4_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.250     4.117 r  u_tx_data_fifo/r_udp_head_sum_reg[8]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     4.117    u_tx_data_fifo/r_udp_head_sum_reg[8]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.155     4.272 r  u_tx_data_fifo/r_udp_head_sum_reg[12]_i_1/O[3]
+                         net (fo=1, unplaced)         0.000     4.272    u_tx_data_fifo_n_35
+                         FDCE                                         r  r_udp_head_sum_reg[15]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+                                                      0.000    10.000 r  clk (IN)
+                         net (fo=227, unset)          0.510    10.510    clk
+                         FDCE                                         r  r_udp_head_sum_reg[15]/C
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.535     9.975    
+                         FDCE (Setup_fdce_C_D)        0.049    10.024    r_udp_head_sum_reg[15]
+  -------------------------------------------------------------------
+                         required time                         10.024    
+                         arrival time                          -4.272    
+  -------------------------------------------------------------------
+                         slack                                  5.752    
+
+Slack (MET) :             5.788ns  (required time - arrival time)
+  Source:                 u_tx_message_fifo/rd_ptr_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            r_udp_head_sum_reg[14]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        3.699ns  (logic 1.283ns (34.685%)  route 2.416ns (65.315%))
+  Logic Levels:           7  (CARRY4=4 LUT6=2 RAMD32=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.535ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=227, unset)          0.537     0.537    u_tx_message_fifo/clk
+                         FDRE                                         r  u_tx_message_fifo/rd_ptr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.223     0.760 r  u_tx_message_fifo/rd_ptr_reg[0]/Q
+                         net (fo=42, unplaced)        0.605     1.365    u_tx_message_fifo/mem_reg_0_15_18_23/ADDRA0
+                         RAMD32 (Prop_ramd32_RADR0_O)
+                                                      0.123     1.488 r  u_tx_message_fifo/mem_reg_0_15_18_23/RAMA_D1/O
+                         net (fo=4, unplaced)         0.521     2.009    u_tx_message_fifo/p_0_in[3]
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.250     2.259 r  u_tx_message_fifo/dout_data_reg[5]_i_10/CO[3]
+                         net (fo=1, unplaced)         0.000     2.259    u_tx_message_fifo/dout_data_reg[5]_i_10_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.155     2.414 r  u_tx_message_fifo/dout_data_reg[9]_i_10/O[3]
+                         net (fo=3, unplaced)         0.512     2.926    u_tx_message_fifo/data32[7]
+                         LUT6 (Prop_lut6_I3_O)        0.120     3.046 f  u_tx_message_fifo/r_udp_head_sum[8]_i_18/O
+                         net (fo=1, unplaced)         0.270     3.316    u_tx_data_fifo/r_udp_head_sum_reg[11]_4
+                         LUT6 (Prop_lut6_I5_O)        0.043     3.359 r  u_tx_data_fifo/r_udp_head_sum[8]_i_4/O
+                         net (fo=2, unplaced)         0.508     3.867    u_tx_data_fifo/r_udp_head_sum[8]_i_4_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.250     4.117 r  u_tx_data_fifo/r_udp_head_sum_reg[8]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     4.117    u_tx_data_fifo/r_udp_head_sum_reg[8]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[2])
+                                                      0.119     4.236 r  u_tx_data_fifo/r_udp_head_sum_reg[12]_i_1/O[2]
+                         net (fo=1, unplaced)         0.000     4.236    u_tx_data_fifo_n_36
+                         FDCE                                         r  r_udp_head_sum_reg[14]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+                                                      0.000    10.000 r  clk (IN)
+                         net (fo=227, unset)          0.510    10.510    clk
+                         FDCE                                         r  r_udp_head_sum_reg[14]/C
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.535     9.975    
+                         FDCE (Setup_fdce_C_D)        0.049    10.024    r_udp_head_sum_reg[14]
+  -------------------------------------------------------------------
+                         required time                         10.024    
+                         arrival time                          -4.236    
+  -------------------------------------------------------------------
+                         slack                                  5.788    
+
+Slack (MET) :             5.790ns  (required time - arrival time)
+  Source:                 u_tx_message_fifo/rd_ptr_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            r_udp_head_sum_reg[12]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        3.697ns  (logic 1.281ns (34.650%)  route 2.416ns (65.350%))
+  Logic Levels:           7  (CARRY4=4 LUT6=2 RAMD32=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.535ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=227, unset)          0.537     0.537    u_tx_message_fifo/clk
+                         FDRE                                         r  u_tx_message_fifo/rd_ptr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.223     0.760 r  u_tx_message_fifo/rd_ptr_reg[0]/Q
+                         net (fo=42, unplaced)        0.605     1.365    u_tx_message_fifo/mem_reg_0_15_18_23/ADDRA0
+                         RAMD32 (Prop_ramd32_RADR0_O)
+                                                      0.123     1.488 r  u_tx_message_fifo/mem_reg_0_15_18_23/RAMA_D1/O
+                         net (fo=4, unplaced)         0.521     2.009    u_tx_message_fifo/p_0_in[3]
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.250     2.259 r  u_tx_message_fifo/dout_data_reg[5]_i_10/CO[3]
+                         net (fo=1, unplaced)         0.000     2.259    u_tx_message_fifo/dout_data_reg[5]_i_10_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.155     2.414 r  u_tx_message_fifo/dout_data_reg[9]_i_10/O[3]
+                         net (fo=3, unplaced)         0.512     2.926    u_tx_message_fifo/data32[7]
+                         LUT6 (Prop_lut6_I3_O)        0.120     3.046 f  u_tx_message_fifo/r_udp_head_sum[8]_i_18/O
+                         net (fo=1, unplaced)         0.270     3.316    u_tx_data_fifo/r_udp_head_sum_reg[11]_4
+                         LUT6 (Prop_lut6_I5_O)        0.043     3.359 r  u_tx_data_fifo/r_udp_head_sum[8]_i_4/O
+                         net (fo=2, unplaced)         0.508     3.867    u_tx_data_fifo/r_udp_head_sum[8]_i_4_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.250     4.117 r  u_tx_data_fifo/r_udp_head_sum_reg[8]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     4.117    u_tx_data_fifo/r_udp_head_sum_reg[8]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[0])
+                                                      0.117     4.234 r  u_tx_data_fifo/r_udp_head_sum_reg[12]_i_1/O[0]
+                         net (fo=1, unplaced)         0.000     4.234    u_tx_data_fifo_n_38
+                         FDCE                                         r  r_udp_head_sum_reg[12]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+                                                      0.000    10.000 r  clk (IN)
+                         net (fo=227, unset)          0.510    10.510    clk
+                         FDCE                                         r  r_udp_head_sum_reg[12]/C
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.535     9.975    
+                         FDCE (Setup_fdce_C_D)        0.049    10.024    r_udp_head_sum_reg[12]
+  -------------------------------------------------------------------
+                         required time                         10.024    
+                         arrival time                          -4.234    
+  -------------------------------------------------------------------
+                         slack                                  5.790    
+
+Slack (MET) :             5.841ns  (required time - arrival time)
+  Source:                 u_tx_message_fifo/rd_ptr_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            r_udp_head_sum_reg[9]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        3.646ns  (logic 1.230ns (33.736%)  route 2.416ns (66.264%))
+  Logic Levels:           6  (CARRY4=3 LUT6=2 RAMD32=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.535ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=227, unset)          0.537     0.537    u_tx_message_fifo/clk
+                         FDRE                                         r  u_tx_message_fifo/rd_ptr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.223     0.760 r  u_tx_message_fifo/rd_ptr_reg[0]/Q
+                         net (fo=42, unplaced)        0.605     1.365    u_tx_message_fifo/mem_reg_0_15_18_23/ADDRA0
+                         RAMD32 (Prop_ramd32_RADR0_O)
+                                                      0.123     1.488 r  u_tx_message_fifo/mem_reg_0_15_18_23/RAMA_D1/O
+                         net (fo=4, unplaced)         0.521     2.009    u_tx_message_fifo/p_0_in[3]
+                         CARRY4 (Prop_carry4_DI[1]_O[3])
+                                                      0.298     2.307 r  u_tx_message_fifo/dout_data_reg[5]_i_10/O[3]
+                         net (fo=3, unplaced)         0.512     2.819    u_tx_message_fifo/data32[3]
+                         LUT6 (Prop_lut6_I3_O)        0.120     2.939 f  u_tx_message_fifo/r_udp_head_sum[4]_i_18/O
+                         net (fo=1, unplaced)         0.270     3.209    u_tx_data_fifo/r_udp_head_sum_reg[7]_4
+                         LUT6 (Prop_lut6_I5_O)        0.043     3.252 r  u_tx_data_fifo/r_udp_head_sum[4]_i_4/O
+                         net (fo=2, unplaced)         0.508     3.760    u_tx_data_fifo/r_udp_head_sum[4]_i_4_n_0
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.250     4.010 r  u_tx_data_fifo/r_udp_head_sum_reg[4]_i_1/CO[3]
+                         net (fo=1, unplaced)         0.000     4.010    u_tx_data_fifo/r_udp_head_sum_reg[4]_i_1_n_0
+                         CARRY4 (Prop_carry4_CI_O[1])
+                                                      0.173     4.183 r  u_tx_data_fifo/r_udp_head_sum_reg[8]_i_1/O[1]
+                         net (fo=1, unplaced)         0.000     4.183    u_tx_data_fifo_n_33
+                         FDCE                                         r  r_udp_head_sum_reg[9]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+                                                      0.000    10.000 r  clk (IN)
+                         net (fo=227, unset)          0.510    10.510    clk
+                         FDCE                                         r  r_udp_head_sum_reg[9]/C
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.535     9.975    
+                         FDCE (Setup_fdce_C_D)        0.049    10.024    r_udp_head_sum_reg[9]
+  -------------------------------------------------------------------
+                         required time                         10.024    
+                         arrival time                          -4.183    
+  -------------------------------------------------------------------
+                         slack                                  5.841    
+
+Slack (MET) :             5.859ns  (required time - arrival time)
+  Source:                 u_tx_message_fifo/rd_ptr_reg[0]/C
+                            (rising edge-triggered cell FDRE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Destination:            r_udp_head_sum_reg[11]/D
+                            (rising edge-triggered cell FDCE clocked by clk  {rise@0.000ns fall@5.000ns period=10.000ns})
+  Path Group:             clk
+  Path Type:              Setup (Max at Slow Process Corner)
+  Requirement:            10.000ns  (clk rise@10.000ns - clk rise@0.000ns)
+  Data Path Delay:        3.628ns  (logic 1.212ns (33.407%)  route 2.416ns (66.593%))
+  Logic Levels:           6  (CARRY4=3 LUT6=2 RAMD32=1)
+  Clock Path Skew:        -0.027ns (DCD - SCD + CPR)
+    Destination Clock Delay (DCD):    0.510ns = ( 10.510 - 10.000 ) 
+    Source Clock Delay      (SCD):    0.537ns
+    Clock Pessimism Removal (CPR):    0.000ns
+  Clock Uncertainty:      0.535ns  ((TSJ^2 + TIJ^2)^1/2 + DJ) / 2 + PE + UU
+    Total System Jitter     (TSJ):    0.071ns
+    Total Input Jitter      (TIJ):    0.000ns
+    Discrete Jitter          (DJ):    0.000ns
+    Phase Error              (PE):    0.000ns
+    User Uncertainty         (UU):    0.500ns
+
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk rise edge)        0.000     0.000 r  
+                                                      0.000     0.000 r  clk (IN)
+                         net (fo=227, unset)          0.537     0.537    u_tx_message_fifo/clk
+                         FDRE                                         r  u_tx_message_fifo/rd_ptr_reg[0]/C
+  -------------------------------------------------------------------    -------------------
+                         FDRE (Prop_fdre_C_Q)         0.223     0.760 r  u_tx_message_fifo/rd_ptr_reg[0]/Q
+                         net (fo=42, unplaced)        0.605     1.365    u_tx_message_fifo/mem_reg_0_15_18_23/ADDRA0
+                         RAMD32 (Prop_ramd32_RADR0_O)
+                                                      0.123     1.488 r  u_tx_message_fifo/mem_reg_0_15_18_23/RAMA_D1/O
+                         net (fo=4, unplaced)         0.521     2.009    u_tx_message_fifo/p_0_in[3]
+                         CARRY4 (Prop_carry4_DI[1]_CO[3])
+                                                      0.250     2.259 r  u_tx_message_fifo/dout_data_reg[5]_i_10/CO[3]
+                         net (fo=1, unplaced)         0.000     2.259    u_tx_message_fifo/dout_data_reg[5]_i_10_n_0
+                         CARRY4 (Prop_carry4_CI_O[3])
+                                                      0.155     2.414 r  u_tx_message_fifo/dout_data_reg[9]_i_10/O[3]
+                         net (fo=3, unplaced)         0.512     2.926    u_tx_message_fifo/data32[7]
+                         LUT6 (Prop_lut6_I3_O)        0.120     3.046 f  u_tx_message_fifo/r_udp_head_sum[8]_i_18/O
+                         net (fo=1, unplaced)         0.270     3.316    u_tx_data_fifo/r_udp_head_sum_reg[11]_4
+                         LUT6 (Prop_lut6_I5_O)        0.043     3.359 r  u_tx_data_fifo/r_udp_head_sum[8]_i_4/O
+                         net (fo=2, unplaced)         0.508     3.867    u_tx_data_fifo/r_udp_head_sum[8]_i_4_n_0
+                         CARRY4 (Prop_carry4_DI[1]_O[3])
+                                                      0.298     4.165 r  u_tx_data_fifo/r_udp_head_sum_reg[8]_i_1/O[3]
+                         net (fo=1, unplaced)         0.000     4.165    u_tx_data_fifo_n_31
+                         FDCE                                         r  r_udp_head_sum_reg[11]/D
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk rise edge)       10.000    10.000 r  
+                                                      0.000    10.000 r  clk (IN)
+                         net (fo=227, unset)          0.510    10.510    clk
+                         FDCE                                         r  r_udp_head_sum_reg[11]/C
+                         clock pessimism              0.000    10.510    
+                         clock uncertainty           -0.535     9.975    
+                         FDCE (Setup_fdce_C_D)        0.049    10.024    r_udp_head_sum_reg[11]
+  -------------------------------------------------------------------
+                         required time                         10.024    
+                         arrival time                          -4.165    
+  -------------------------------------------------------------------
+                         slack                                  5.859    
+
+
+
+

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# xsim v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Oct  7 21:44:48 2026
+# Process ID: 5244
+# Current directory: D:/coding/verilog/xc7k70t/project_ethernet/sim_verify
+# Command line: xsim.exe -mode tcl -source {xsim.dir/tb_r3/xsim_script.tcl}
+# Log file: D:/coding/verilog/xc7k70t/project_ethernet/sim_verify/xsim.log
+# Journal file: D:/coding/verilog/xc7k70t/project_ethernet/sim_verify\xsim.jou
+#-----------------------------------------------------------
+source xsim.dir/tb_r3/xsim_script.tcl
+run -all

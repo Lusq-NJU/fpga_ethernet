@@ -1,0 +1,1 @@
+-L "unisims_ver" "work.tb_ethernet_tx_pack" "work.glbl" -s "tb_sim" --debug "typical" 

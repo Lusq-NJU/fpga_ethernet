@@ -1,0 +1,2 @@
+fifo_19x65536_fwft_sync.v,verilog,xil_defaultlib,../../../../project_ethernet.gen/sources_1/ip/fifo_19x65536_fwft_sync/sim/fifo_19x65536_fwft_sync.v,
+glbl.v,Verilog,xil_defaultlib,glbl.v

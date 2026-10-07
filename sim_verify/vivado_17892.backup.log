@@ -1,0 +1,272 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Oct  7 20:41:43 2026
+# Process ID: 17892
+# Current directory: D:/coding/verilog/xc7k70t/project_ethernet/sim_verify
+# Command line: vivado.exe -mode batch -source synth.tcl
+# Log file: D:/coding/verilog/xc7k70t/project_ethernet/sim_verify/vivado.log
+# Journal file: D:/coding/verilog/xc7k70t/project_ethernet/sim_verify\vivado.jou
+#-----------------------------------------------------------
+source synth.tcl
+# read_verilog {
+#     ethernet_tx_pack_v2.v
+#     fifo_synth_model.v
+# }
+# synth_design -top ethernet_tx_pack -part xc7k70tfbg676-2 -mode out_of_context
+Command: synth_design -top ethernet_tx_pack -part xc7k70tfbg676-2 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7k70t'
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 1868
+---------------------------------------------------------------------------------
+Starting Synthesize : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1018.355 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'ethernet_tx_pack' [D:/coding/verilog/xc7k70t/project_ethernet/sim_verify/ethernet_tx_pack_v2.v:3]
+	Parameter IDLE bound to: 0 - type: integer 
+	Parameter MAC bound to: 1 - type: integer 
+	Parameter IP bound to: 2 - type: integer 
+	Parameter UDP bound to: 3 - type: integer 
+	Parameter DATA bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'fifo_19x65536_fwft_sync' [D:/coding/verilog/xc7k70t/project_ethernet/sim_verify/fifo_synth_model.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_19x65536_fwft_sync' (1#1) [D:/coding/verilog/xc7k70t/project_ethernet/sim_verify/fifo_synth_model.v:5]
+INFO: [Synth 8-6157] synthesizing module 'fifo_32x128_fwft_sync' [D:/coding/verilog/xc7k70t/project_ethernet/sim_verify/fifo_synth_model.v:36]
+INFO: [Synth 8-6155] done synthesizing module 'fifo_32x128_fwft_sync' (2#1) [D:/coding/verilog/xc7k70t/project_ethernet/sim_verify/fifo_synth_model.v:36]
+INFO: [Synth 8-6155] done synthesizing module 'ethernet_tx_pack' (3#1) [D:/coding/verilog/xc7k70t/project_ethernet/sim_verify/ethernet_tx_pack_v2.v:3]
+---------------------------------------------------------------------------------
+Finished Synthesize : Time (s): cpu = 00:00:04 ; elapsed = 00:00:03 . Memory (MB): peak = 1018.355 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1018.355 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7k70tfbg676-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1018.355 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7k70tfbg676-2
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1018.355 ; gain = 0.000
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	  10 Input   20 Bit       Adders := 2     
+	   2 Input   17 Bit       Adders := 3     
+	   2 Input   16 Bit       Adders := 6     
+	   2 Input    8 Bit       Adders := 2     
+	   2 Input    5 Bit       Adders := 6     
+	   2 Input    3 Bit       Adders := 1     
++---Registers : 
+	               16 Bit    Registers := 2     
+	                8 Bit    Registers := 2     
+	                5 Bit    Registers := 4     
+	                3 Bit    Registers := 2     
+	                1 Bit    Registers := 5     
++---RAMs : 
+	              512 Bit	(16 X 32 bit)          RAMs := 1     
+	              304 Bit	(16 X 19 bit)          RAMs := 1     
++---Muxes : 
+	   2 Input   16 Bit        Muxes := 5     
+	   2 Input    8 Bit        Muxes := 2     
+	   2 Input    3 Bit        Muxes := 3     
+	   2 Input    2 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 4     
+	   5 Input    1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 240 (col length:80)
+BRAMs: 270 (col length: RAMB18 80 RAMB36 40)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1018.355 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Preliminary Mapping	Report (see note below)
++-----------------+---------------------------+-----------+----------------------+-------------+
+|Module Name      | RTL Object                | Inference | Size (Depth x Width) | Primitives  | 
++-----------------+---------------------------+-----------+----------------------+-------------+
+|ethernet_tx_pack | u_tx_data_fifo/mem_reg    | Implied   | 16 x 18              | RAM32M x 3	 | 
+|ethernet_tx_pack | u_tx_message_fifo/mem_reg | Implied   | 16 x 32              | RAM32M x 6	 | 
++-----------------+---------------------------+-----------+----------------------+-------------+
+
+Note: The table above is a preliminary report that shows the Distributed RAMs at the current stage of the synthesis flow. Some Distributed RAMs may be reimplemented as non Distributed RAM primitives later in the synthesis flow. Multiple instantiated RAMs are reported only once.
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+No constraint files found.
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1018.355 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Distributed RAM: Final Mapping	Report
++-----------------+---------------------------+-----------+----------------------+-------------+
+|Module Name      | RTL Object                | Inference | Size (Depth x Width) | Primitives  | 
++-----------------+---------------------------+-----------+----------------------+-------------+
+|ethernet_tx_pack | u_tx_data_fifo/mem_reg    | Implied   | 16 x 18              | RAM32M x 3	 | 
+|ethernet_tx_pack | u_tx_message_fifo/mem_reg | Implied   | 16 x 32              | RAM32M x 6	 | 
++-----------------+---------------------------+-----------+----------------------+-------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1018.355 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1018.355 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1018.355 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1018.355 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1018.355 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1018.355 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1018.355 ; gain = 0.000
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |    81|
+|2     |LUT1   |    11|
+|3     |LUT2   |    51|
+|4     |LUT3   |   121|
+|5     |LUT4   |   114|
+|6     |LUT5   |   131|
+|7     |LUT6   |   169|
+|8     |RAM32M |     9|
+|9     |FDCE   |    89|
+|10    |FDPE   |     1|
+|11    |FDRE   |    20|
++------+-------+------+
+
+Report Instance Areas: 
++------+--------------------+------------------------+------+
+|      |Instance            |Module                  |Cells |
++------+--------------------+------------------------+------+
+|1     |top                 |                        |   797|
+|2     |  u_tx_data_fifo    |fifo_19x65536_fwft_sync |    52|
+|3     |  u_tx_message_fifo |fifo_32x128_fwft_sync   |   175|
++------+--------------------+------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1018.355 ; gain = 0.000
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1018.355 ; gain = 0.000
+Synthesis Optimization Complete : Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1018.355 ; gain = 0.000
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1018.355 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 90 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1018.355 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 9 instances were transformed.
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 9 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+18 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1018.355 ; gain = 0.000
+# create_clock -period 10.000 -name clk [get_ports clk]
+# set_clock_uncertainty 0.5 [get_clocks clk]
+# report_timing_summary -file timing_summary.rpt
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+WARNING: [Timing 38-242] The property HD.CLK_SRC of clock port "clk" is not set. In out-of-context mode, this prevents timing estimation for clock delay/skew
+Resolution: Set the HD.CLK_SRC property of the out-of-context port to the location of the clock buffer instance in the top-level design
+# report_timing -max_paths 25 -file timing_paths.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -max_paths 25 -nworst 1 -delay_type max -sort_by slack.
+# puts "================ 校验和相关路�? ================"
+================ 校验和相关路�? ================
+# report_timing -from [get_cells -hier -filter {NAME =~ *ip_sum* || NAME =~ *udp_sum* || NAME =~ *u_tx_message_fifo*}] \
+#               -max_paths 10 -file timing_checksum.rpt
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -2, Delay Type: max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+INFO: [Timing 38-78] ReportTimingParams: -from_pins  -max_paths 10 -nworst 1 -delay_type max -sort_by slack.
+# puts "================ SYNTH DONE ================"
+================ SYNTH DONE ================
+INFO: [Common 17-206] Exiting Vivado at Wed Oct  7 20:42:04 2026...
